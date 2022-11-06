@@ -11,6 +11,7 @@ describe("Example routes test suite", () => {
     });
     it("should return an object with the correct properties", async () => {
       const app = new ServerHandler().setup();
+
       const result = await request(app).get("/example");
       expect(result.body).toHaveProperty("exampleString");
       expect(result.body).toHaveProperty("exampleNumber");
